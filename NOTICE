@@ -1,0 +1,24 @@
+NOTICE
+======
+
+dfs-to-xlsx
+Copyright (c) 2026
+SPDX-License-Identifier: MIT
+
+This project is licensed under the MIT License. A copy of the license is
+included in the LICENSE file.
+
+This software may include optional configuration files, benchmarks, and tests
+that are also provided under the MIT License unless otherwise stated.
+
+Third-Party Components
+======================
+This project depends on the following open-source libraries:
+
+- pandas
+- openpyxl
+- tqdm
+- PyYAML
+
+Each of these components is governed by its own license. Refer to their
+respective repositories for details.

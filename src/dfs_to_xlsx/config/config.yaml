@@ -1,0 +1,62 @@
+# Configuration file for dfs_to_xlsx.py | XlsxDataFrameWriter.
+# v.0.6.15 | 2026-05-31 | License under MIT License
+
+# This YAML configuration file defines parameters for the dfs_to_xlsx.py script, which converts DataFrames to Excel files with various options for formatting, batching, and output management.
+
+# Parameters:
+
+# output_folder: The directory where output files will be saved. Defaults to `output` when left empty.
+output_folder: "output"
+
+# base_filename: The base name for output files. Defaults to 'export' when left empty.
+base_filename: "report"
+
+# log_folder: The directory where log files will be saved. If left empty, logging will be disabled.
+log_folder: "output/log/"
+
+# max_size_mb: The maximum file size in megabytes before splitting or compressing. Defaults to `25` mb when left empty.
+max_size_mb: 25
+
+# max_sheets_per_file: The maximum number of sheets allowed in a single Excel file before splitting. Defaults to `20` sheets when left empty.
+max_sheets_per_file: 20
+
+# enable_progress: Whether to display a progress bar during pipeline processing. Defaults to `true` when left empty.
+enable_progress: false
+
+# enable_word_wrap: Whether to enable word wrapping in Excel cells. Defaults to `true` when left empty.
+enable_word_wrap: true
+
+# max_line_length: The maximum line length for cell content before truncation or wrapping. Defaults to `50` characters when left empty. Setting this parameter helps prevent excessively wide columns in Excel, which can improve readability and performance when dealing with large datasets.
+max_line_length: 50
+
+# header_color: The background color for header rows in Excel sheets, specified in hexadecimal format. Defaults to `#F2F2F2` (a light grey) when left empty. This parameter allows you to customize the appearance of header rows for better visual distinction from data rows.
+header_color: "#F2F2F2"
+
+# header_font_color: The font color for header rows in Excel sheets, specified in hexadecimal format. Defaults to `#595959` (a dark grey) when left empty. This parameter ensures that the text in header rows is clearly visible against the specified `header_color`, enhancing readability.
+header_font_color: "#595959"
+
+# freeze_panes: The number of columns to freeze at the left of each sheet. Defaults to `1` when left empty. This means the first column will be frozen, allowing it to remain visible while scrolling horizontally through the data.
+freeze_panes: 1
+
+# freeze_rows: The number of rows to freeze at the top of each sheet. Defaults to `1` when left empty, which means the first row (usually the header) will be frozen for easy reference while scrolling through the data
+freeze_rows: 1
+
+# batch_threshold: The number of rows at which to start batching. Defaults to `50000` rows when left empty.
+batch_threshold: 50000
+
+# batch_size: The number of rows to include in each batch when batching is enabled. Defaults to `5000` rows when left empty. If the total number of rows exceeds `batch_threshold`, the DataFrame will be split into batches of this size for processing, which can help manage memory usage and improve performance when dealing with large datasets.
+batch_size: 5000
+
+# hit_list: A list of keywords to check for in specified columns. If `enable_hit_list` is true, cells containing any of these keywords will be highlighted.
+hit_list:
+  - "error"
+  - "warning"
+  - "failed"
+
+# check_cols: A list of column names to check for the presence of `hit_list` keywords when `enable_hit_list` is true.
+check_cols:
+  - "comments"
+  - "status"
+
+# enable_logging: Whether to prompt the user for input parameters at runtime. If set to `true`, the package will print logging information. If set to `false`, the package will run with the parameters specified in this configuration file without prompting the user. Defaults to `true` when left empty.
+enable_logging: true

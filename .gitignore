@@ -1,0 +1,76 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Export folders
+/export
+/data
+/output
+/exports
+/outputs
+# /tests
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.swp
+*.xlsx
+*.xls
+
+# Ignore compiled binaries
+*.out
+*.exe
+*.dll
+*.so
+*.o
+*.obj
+*.json
+*.kml
+*.pkl
+*.zip
+*.tar.gz
+*.mp4
+*.png
+*.xml
+
+# Ignore dependency directories
+node_modules/
+vendor/
+target/
+dist/
+build/
+cache/
+
+
+# Benchmarks and test caches
+.benchmarks
+.pytest_cache/
+
+# Ignore environment files
+.env
+.env.local
+.env.production
+.env.test
+/.venv*
+
+# Ignore IDE and editor settings
+.idea/
+.vscode/
+*.sublime-workspace
+
+# Ignore generated documentation
+docs/generated/
+*.html
+
+
+# Ignore Python files
+*.pyc
+__pycache__/
+
+# Ignore macOS files
+*.DS_Store
+
+# Ignore Windows files
+*.dat
+*.ini
+/locations.kml
