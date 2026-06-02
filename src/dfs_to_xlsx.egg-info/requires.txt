@@ -1,6 +1,0 @@
-pandas>=2.0.0
-openpyxl
-tqdm
-pyyaml
-num2words>=0.5.14
-XlsxWriter>=3.2.3

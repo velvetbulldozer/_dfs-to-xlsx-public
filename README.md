@@ -21,7 +21,7 @@
       - [🎨 Hit List Highlighting (Conditional Formatting)](#-hit-list-highlighting-conditional-formatting)
       - [📁 Logging](#-logging)
       - [•••·· Monitoring progress](#-monitoring-progress)
-- [📝 License](#-license)
+- [📝 Package Info and Quality](#-package-info-and-quality)
 
 ---
 
@@ -333,8 +333,30 @@ writer = XlsxDataFrameWriter(
 )
 ```
 ---
-# 📝 License
-![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-![Python Versions](https://img.shields.io/pypi/pyversions/_dfs-to-xlsx-public.svg)
-![PyPI - Version](https://img.shields.io/pypi/v/_dfs-to-xlsx-public.svg)
-![GitHub last commit](https://img.shields.io/github/last-commit/velvetbulldozer/_dfs-to-xlsx-public)
+# 📝 Package Info and Quality
+<p align="center">
+  <!-- Identity -->
+  <img src="https://img.shields.io/badge/License-MIT-green.svg" />
+  <img src="https://img.shields.io/pypi/pyversions/dfs-to-xlsx.svg" />
+  <img src="https://img.shields.io/pypi/v/dfs-to-xlsx.svg" />
+  <img src="https://img.shields.io/pypi/dw/dfs-to-xlsx.svg" />
+  <img src="https://static.pepy.tech/badge/dfs-to-xlsx" />
+</p>
+<p align="center">
+  <!-- Quality -->
+  <img src="https://img.shields.io/badge/code%20style-black-000000.svg" />
+  <img src="https://img.shields.io/badge/type%20checked-mypy-blue" />
+  <img src="https://img.shields.io/pypi/wheel/dfs-to-xlsx" />
+  <img src="https://img.shields.io/librariesio/release/pypi/dfs-to-xlsx" />
+  <img src="https://img.shields.io/badge/tests-pytest-blue" />
+  <img src="https://img.shields.io/badge/lint-ruff-red" />
+</p>
+<p align="center">
+  <!-- Repo activity + Tech -->
+  <img src="https://img.shields.io/github/last-commit/velvetbulldozer/_dfs-to-xlsx-public" />
+  <img src="https://img.shields.io/github/stars/velvetbulldozer/_dfs-to-xlsx-public" />
+  <img src="https://img.shields.io/github/forks/velvetbulldozer/_dfs-to-xlsx-public" />
+  <img src="https://img.shields.io/github/issues/velvetbulldozer/_dfs-to-xlsx-public" />
+  <img src="https://img.shields.io/badge/powered%20by-pandas-150458.svg" />
+  <img src="https://img.shields.io/badge/Excel-217346?logo=microsoft-excel&logoColor=white" />
+</p>
