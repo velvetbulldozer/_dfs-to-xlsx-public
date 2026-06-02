@@ -3,19 +3,18 @@
 </div>
 
 ---
+# Table of contents | **dfs-to-xlsx**
 
-<details open>
-
-<summary>Table of Contents</summary>
-
-- [**dfs-to-xlsx** | What does it do?](#dfs-to-xlsx--what-does-it-do)
+- [Table of contents | **dfs-to-xlsx**](#table-of-contents--dfs-to-xlsx)
+- [What does it do?](#what-does-it-do)
   - [🚀 Installation](#-installation)
   - [⚙️ Use **YAML-config file** or use parameters on instantiation](#️-use-yaml-config-file-or-use-parameters-on-instantiation)
-  - [📦 Basic Usage](#-basic-usage)
-      - [📄 Single DataFrame](#-single-dataframe)
+  - [📦 Basic Usage  — All Parameters](#-basic-usage---all-parameters)
         - [✔ What the example does](#-what-the-example-does)
-      - [📄 Multiple DataFrames — All Parameters](#-multiple-dataframes--all-parameters)
+      - [📄 Single DataFrame](#-single-dataframe)
         - [✔ What the example does](#-what-the-example-does-1)
+      - [📄 Multiple DataFrames](#-multiple-dataframes)
+        - [✔ What the example does](#-what-the-example-does-2)
       - [📚 Multiple DataFrames — Input Styles](#-multiple-dataframes--input-styles)
       - [🧩 Batching Large DataFrames](#-batching-large-dataframes)
       - [🗜 Automatic ZIP Compression](#-automatic-zip-compression)
@@ -24,11 +23,9 @@
       - [•••·· Monitoring progress](#-monitoring-progress)
 - [📝 License](#-license)
 
-</details>
-
 ---
 
-# **dfs-to-xlsx** | What does it do?
+# What does it do?
 `dfs-to-xlsx` provides a clean API for exporting one or many DataFrames to Excel. A fast, flexible, and feature-rich Excel exporter for **multiple pandas DataFrames** to an **Excel spreadsheet**. It lets you export one or many pandas DataFrames into a clean, well‑formatted Excel workbook — with zero boilerplate.
 
 ✨ Key Features:
@@ -134,7 +131,7 @@ enable_logging: true
 ```
 
 ---
-## 📦 Basic Usage
+## 📦 Basic Usage  — All Parameters
 In your script import the writer and config file:
 ```python
 # import package
@@ -170,6 +167,21 @@ writer = XlsxDataFrameWriter(
     )
 ```
 
+##### ✔ What the example does
+- Writes all DataFrames into one Excel file
+- Automatically sanitizes sheet names
+- Creates the output folder if missing
+- Generates a clean filename automatically
+- Supports maximum file size before auto‑zipping
+- Supports maximum sheets per workbook
+- Optional progress bar
+- Adds each DataFrame to its own sheet
+- Applies word‑wrap to keep columns readable
+- Optional hit‑list conditional formatting (e.g., highlight “error”, “warning”, “failed”)
+- Automatic batching for large DataFrames
+- Configurable batch size
+- Optional logging of all added DataFrames
+
 ---
 #### 📄 Single DataFrame
 
@@ -190,7 +202,7 @@ result = writer._write_sync()
 - Adds a single dataframe to spreadsheet
 - Exports DataFrame
 ---
-#### 📄 Multiple DataFrames — All Parameters
+#### 📄 Multiple DataFrames
 
 Use multiple ```add_dfs``` to export multiple DataFrames and use ```all parameters``` on instantiation of the XlsxDataFrameWriter:
 ```python
@@ -214,20 +226,9 @@ result = writer._write_sync()
 ```
 
 ##### ✔ What the example does
-- Writes all DataFrames into one Excel file
-- Automatically sanitizes sheet names
-- Creates output folder
-- Creates filename
-- Specify maximum mb-size before zipping
-- Specify maximum amount of sheets in a spreadsheet
-- Enable progress bar
-- Adds each DataFrame to its own sheet
-- Applies word wrap to keep columns within a normalized length with a max of 20.000 rows
-- Apply hit‑list vocabulary and conditional formatting on specified columns
-- Apply batching if over a x-amount of rows
-- Ability to specify size of the batches
-- Ability to show added DataFrames
-- Ability to disable logging output
+- Adds multiple DataFrames at once, each with its own sheet name
+- Shows all added sheets (either as a list or printed with index positions)
+- Exports everything into a single Excel file with all configured features applied
 ---
 #### 📚 Multiple DataFrames — Input Styles
 You can pass multiple DataFrames to add_dfs in three different formats, depending on what fits your workflow best.
@@ -273,7 +274,6 @@ exporter.add_dfs(
     ]
 )
 ```
-
 ---
 #### 🧩 Batching Large DataFrames
 
