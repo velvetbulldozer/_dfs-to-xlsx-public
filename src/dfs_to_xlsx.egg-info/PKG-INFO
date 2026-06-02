@@ -364,8 +364,6 @@ writer = XlsxDataFrameWriter(
   <!-- Identity -->
   <img src="https://img.shields.io/badge/License-MIT-green.svg" />
   <img src="https://img.shields.io/pypi/pyversions/dfs-to-xlsx.svg" />
-  <img src="https://img.shields.io/pypi/v/dfs-to-xlsx.svg" />
-  <img src="https://img.shields.io/pypi/dw/dfs-to-xlsx.svg" />
   <img src="https://static.pepy.tech/badge/dfs-to-xlsx" />
 </p>
 <p align="center">
