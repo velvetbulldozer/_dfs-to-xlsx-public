@@ -1,6 +1,12 @@
+<div align="center">
+  <img src="https://github.com/velvetbulldozer/_dfs-to-xlsx-public/raw/f56e9284543d37add078637e666bfe3f497748c5/image.svg" alt="dfs-to-xlsx Logo">
+</div>
+
+---
 
 <details open>
-<summary>📑 Table of Contents</summary>
+
+<summary>Table of Contents</summary>
 
 - [**dfs-to-xlsx** | What does it do?](#dfs-to-xlsx--what-does-it-do)
   - [🚀 Installation](#-installation)
@@ -19,6 +25,8 @@
 - [📝 License](#-license)
 
 </details>
+
+---
 
 # **dfs-to-xlsx** | What does it do?
 `dfs-to-xlsx` provides a clean API for exporting one or many DataFrames to Excel. A fast, flexible, and feature-rich Excel exporter for **multiple pandas DataFrames** to an **Excel spreadsheet**. It lets you export one or many pandas DataFrames into a clean, well‑formatted Excel workbook — with zero boilerplate.
