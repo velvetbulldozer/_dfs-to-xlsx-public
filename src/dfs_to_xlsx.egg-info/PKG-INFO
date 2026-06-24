@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: dfs-to-xlsx
-Version: 0.7.12
+Version: 0.7.14
 Summary: A fast, flexible Excel exporter for multiple pandas DataFrames into a styled Excel workbook.
 License-Expression: MIT
 Project-URL: Homepage, https://github.com/velvetbulldozer/_dfs-to-xlsx-public
