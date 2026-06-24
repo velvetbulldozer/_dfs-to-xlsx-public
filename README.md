@@ -148,7 +148,7 @@ writer = XlsxDataFrameWriter(
     config_path=None,  # not used since we're passing config directly
     output_folder="output",
     base_filename="single_export",
-    log_file="output/log/",
+    log_folder="output/log/",
     max_size_mb=5,
     max_sheets_per_file=20,
     enable_progress=False,
@@ -317,7 +317,7 @@ Enable logging to a file:
 # or change values in the import yaml and import the yaml, see above.
 writer = XlsxDataFrameWriter(
     output_folder="output",
-    log_file="output/log/",
+    log_folder="output/log/",
     enable_logging=True,
 )
 ```
