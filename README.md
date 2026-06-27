@@ -65,7 +65,7 @@ This is useful when debugging, reporting issues, or confirming that an upgrade s
 ## ⚙️ Use **YAML-config file** or use parameters on instantiation
 Two approaches:
  1. Add YAML-config file to the root of your project in `config.yaml`
- 2. Or use parameters in the class instantiation — see paragraph [📄 Multiple DataFrames — All Parameters](#-multiple-dataframes--all-parameters)
+ 2. Or use parameters in the class instantiation — see paragraph [📦 Basic Usage](#-basic-usage)
 
 ```yaml
 # Parameters:
