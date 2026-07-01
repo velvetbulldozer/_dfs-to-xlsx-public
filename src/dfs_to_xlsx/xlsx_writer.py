@@ -4,6 +4,7 @@
 import logging  # Logging to console and file
 import math  # Math utilities (ceil for batching)
 import os  # File and path operations
+import warnings  # Deprecation warnings and user notifications
 from typing import Any  # Generic typing support
 
 # Third-party imports
@@ -338,7 +339,17 @@ class XlsxDataFrameWriter:
             file, including fields such as file path, ZIP path (if compressed),
             and file size.
 
+        Notes:
+            Deprecated: use write_sync() instead.
+
         """
+        warnings.warn(
+            "_write_sync() is deprecated and will be removed in a future version. "
+            "Use write_sync() instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+
         file_index = 1
         sheet_items = list(self.dataframes.items())
         result = {}
@@ -352,7 +363,20 @@ class XlsxDataFrameWriter:
 
             self._write_single_file(filename, chunk)
             result = self.post_processor.process(filename)
+
         return result
+
+    def write_sync(self) -> dict[str, Any]:
+        """Write all registered DataFrames to Excel files.
+
+        This is the preferred public API. It delegates to `_write_sync()`,
+        which is deprecated.
+
+        Returns:
+            dict[str, Any]: Status information for the final written file.
+
+        """
+        return self._write_sync()
 
     # -------------------------------------------------------------------------
     # Write a single Excel file
