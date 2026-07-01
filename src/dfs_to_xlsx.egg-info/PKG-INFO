@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: dfs-to-xlsx
-Version: 0.7.17
+Version: 0.7.18
 Summary: A fast, flexible Excel exporter for multiple pandas DataFrames into a styled Excel workbook.
 License-Expression: MIT
 Project-URL: Homepage, https://github.com/velvetbulldozer/_dfs-to-xlsx-public
@@ -221,7 +221,7 @@ writer = XlsxDataFrameWriter.from_yaml("config.yaml")
 writer.add_df(df, "Employees")
 
 # export result
-result = writer._write_sync()
+result = writer.write_sync()
 ```
 ##### ✔ What the example does
 - Uses presets from config.yaml located in root folder
@@ -248,7 +248,7 @@ writer.add_dfs(
 writer.list_sheet_names(True)
 
 # export result
-result = writer._write_sync()
+result = writer.write_sync()
 ```
 
 ##### ✔ What the example does
