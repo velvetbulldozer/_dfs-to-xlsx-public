@@ -195,7 +195,7 @@ writer = XlsxDataFrameWriter.from_yaml("config.yaml")
 writer.add_df(df, "Employees")
 
 # export result
-result = writer._write_sync()
+result = writer.write_sync()
 ```
 ##### ✔ What the example does
 - Uses presets from config.yaml located in root folder
@@ -222,7 +222,7 @@ writer.add_dfs(
 writer.list_sheet_names(True)
 
 # export result
-result = writer._write_sync()
+result = writer.write_sync()
 ```
 
 ##### ✔ What the example does
